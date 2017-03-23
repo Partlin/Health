@@ -10,4 +10,12 @@
     <string name="女">女</string>
     <string name="取消按钮">取消</string>
     <string name="提交按钮">提交</string>
+    <string name="action_settings">设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="battery_default_value">电池电量</string>
+    <string name="menu_delete">删除</string>
+    <string name="title_activity_configuration">历史</string>
+    <string name="no_sensor_found">扫描中。。。 </string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="arrow_image">Arrow</string>
 </resources>

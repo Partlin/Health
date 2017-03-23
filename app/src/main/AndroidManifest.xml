@@ -4,6 +4,10 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
+    <uses-feature
+        android:name="android:hardware.bluetooth_le"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,6 +25,19 @@
         </activity>
         <activity android:name=".login.RegisterActivity" />
         <activity android:name=".MainActivity" />
+        <activity
+            android:name="com.lin.health.temp.TemperatureSensorsActivity"
+
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.lin.health.temp.ConfigurationActivity"
+            android:label="@string/title_activity_configuration"
+            android:parentActivityName="com.lin.health.temp.TemperatureSensorsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
     </application>
 
 </manifest>
