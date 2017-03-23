@@ -23,11 +23,11 @@ public class UserService {
         return false;
     }
     //注册
-    public boolean register(User user){
+    public boolean register(String username,String password,String age,String sex){
         SQLiteDatabase sdb=dbHelper.getReadableDatabase();
         String sql="insert into user(username,password,age,sex) values(?,?,?,?)";
-        Object obj[]={user.getUsername(),user.getPassword(),user.getAge(),user.getSex()};
-        sdb.execSQL(sql, obj);
+        //Object obj[]={user.getUsername(),user.getPassword(),user.getAge(),user.getSex()};
+        sdb.execSQL(sql,new String[]{username,password,age,sex});
         return true;
     }
 }
