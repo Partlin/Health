@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Health</string>
+    <string name="注册">注册</string>
+    <string name="用户名">用户名:</string>
+    <string name="密码">密 码:</string>
+    <string name="确认密码">确认密码:</string>
+    <string name="年龄">年 龄:</string>
+    <string name="性别">性 别:</string>
+    <string name="男">男</string>
+    <string name="女">女</string>
+    <string name="取消按钮">取消</string>
+    <string name="提交按钮">提交</string>
 </resources>

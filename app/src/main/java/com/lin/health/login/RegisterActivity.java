@@ -2,74 +2,61 @@ package com.lin.health.login;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.text.InputType;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.lin.health.MainActivity;
 import com.lin.health.R;
-import com.lin.health.database.UserDbAdapter;
-
-
+import com.lin.health.database.User;
+import com.lin.health.database.UserService;
 
 public class RegisterActivity extends Activity {
-    private EditText mUserText;
-    private EditText mPasswordText;
-    private EditText mConPasswordText;
-    private UserDbAdapter mDbHelper;
+    EditText username;
+    EditText password;
+    EditText age;
+    EditText conpasswordET;
+    RadioGroup sex;
+    Button register;
+    Button cancel;
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mDbHelper = new UserDbAdapter(this);
-        mDbHelper.open();
         setContentView(R.layout.register);
-
-        mUserText = (EditText) findViewById(R.id.userNameAuto);
-        mPasswordText = (EditText) findViewById(R.id.password);
-        mPasswordText.setInputType(InputType.TYPE_CLASS_TEXT
-                | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-        mConPasswordText = (EditText) findViewById(R.id.conpasswordET);
-        mConPasswordText.setInputType(InputType.TYPE_CLASS_TEXT
-                | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-
-        Button confirmButton = (Button) findViewById(R.id.regBT);
-        Button cancelButton = (Button) findViewById(R.id.canBT);
-
-        confirmButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                String username = mUserText.getText().toString();
-                String password = mPasswordText.getText().toString();
-                String conPassword = mConPasswordText.getText().toString();
-                if((username == null||username.equalsIgnoreCase("")) || (password == null||password.equalsIgnoreCase("")) || (conPassword == null||conPassword.equalsIgnoreCase(""))){
-                    Toast.makeText(RegisterActivity.this, "The user name and password are necessary.",
+        findViews();
+        register.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String name=username.getText().toString().trim();
+                String pass=password.getText().toString().trim();
+                String conPassword=conpasswordET.getText().toString().trim();
+                String agestr=age.getText().toString().trim();
+                String sexstr=((RadioButton)RegisterActivity.this.findViewById(sex.getCheckedRadioButtonId())).getText().toString();
+                Log.i("TAG",name+"_"+pass+"_"+agestr+"_"+sexstr);
+                UserService uService=new UserService(RegisterActivity.this);
+                User user=new User();
+                user.setUsername(name);
+                user.setPassword(pass);
+                user.setAge(Integer.parseInt(agestr));
+                user.setSex(sexstr);
+                if (!pass.equals(conPassword)) {
+                    Toast.makeText(RegisterActivity.this, "密码不一致，请重新输入",
                             Toast.LENGTH_SHORT).show();
                 }else{
-                    Cursor cursor = mDbHelper.getDiary(username);
-                    if(cursor.moveToFirst()){
-                        Toast.makeText(RegisterActivity.this, "The user name already exists.",
-                                Toast.LENGTH_SHORT).show();
-                    }else if (!password.equals(conPassword)) {
-                        Toast.makeText(RegisterActivity.this, "Two password is not consistent, please enter again.",
-                                Toast.LENGTH_SHORT).show();
-                    }else{
-                        mDbHelper.createUser(username, password);
-                        Toast.makeText(RegisterActivity.this, "Register successfully. Wait for going to the login page...",
-                                Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent();
-                        intent.setClass(RegisterActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    }
+                    uService.register(user);
+                    Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent();
+                    intent.setClass(RegisterActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
+
             }
-
         });
-
-        cancelButton.setOnClickListener(new View.OnClickListener() {
+        cancel.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.setClass(RegisterActivity.this, MainActivity.class);
@@ -78,4 +65,16 @@ public class RegisterActivity extends Activity {
 
         });
     }
+    private void findViews() {
+        username=(EditText) findViewById(R.id.username);
+        password=(EditText) findViewById(R.id.password);
+        conpasswordET= (EditText) findViewById(R.id.conpasswordET);
+        age=(EditText) findViewById(R.id.ageRegister);
+        sex=(RadioGroup) findViewById(R.id.sexRegister);
+        register=(Button) findViewById(R.id.commit);
+        cancel= (Button) findViewById(R.id.canBT);
+    }
+
 }
+
+
