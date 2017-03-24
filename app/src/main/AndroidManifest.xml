@@ -38,6 +38,26 @@
             android:parentActivityName="com.lin.health.temp.TemperatureSensorsActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name="com.lin.health.ble.ScanningActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.lin.health.ble.PeripheralActivity"
+            android:label="@string/title_activity_peripheral"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+        </activity>
+        <activity
+            android:name="com.lin.health.ble.HRDemoActivity"
+            android:label="@string/title_activity_hrdemo"
+            android:parentActivityName="com.lin.health.ble.ScanningActivity"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.lin.health.ble.ScanningActivity" />
+        </activity>
     </application>
 
 </manifest>

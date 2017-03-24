@@ -14,8 +14,8 @@ import android.widget.Toast;
 
 import com.lin.health.MainActivity;
 import com.lin.health.R;
+import com.lin.health.ble.ScanningActivity;
 import com.lin.health.database.UserService;
-import com.lin.health.temp.TemperatureSensorsActivity;
 
 public class RegisterActivity extends Activity {
     EditText username;
@@ -70,7 +70,7 @@ public class RegisterActivity extends Activity {
                         if (flag) {
                             Log.i("TAG", "注册成功");
                             Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_LONG).show();
-                            Intent intent = new Intent(RegisterActivity.this, TemperatureSensorsActivity.class);
+                            Intent intent = new Intent(RegisterActivity.this, ScanningActivity.class);
                             startActivity(intent);
                         } else {
                             Log.i("TAG", "注册失败");

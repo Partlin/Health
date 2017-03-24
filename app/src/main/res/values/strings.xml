@@ -18,4 +18,6 @@
     <string name="no_sensor_found">扫描中。。。 </string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="arrow_image">Arrow</string>
+    <string name="title_activity_peripheral">设备</string>
+    <string name="title_activity_hrdemo">demo</string>
 </resources>
