@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="8dp">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<EditText
+			android:id="@+id/field"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:hint="@string/uart_edit_command_hint"
+			android:maxLines="3"/>
+
+		<CheckBox
+			android:id="@+id/active"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/uart_edit_active"/>
+	</LinearLayout>
+
+	<RadioGroup
+		android:id="@+id/uart_eol"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_marginLeft="5dp">
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/uart_eol"/>
+
+		<RadioButton
+			android:id="@+id/uart_eol_lf"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="80dp"
+			android:checked="true"
+			android:text="@string/uart_eol_lf"/>
+
+		<RadioButton
+			android:id="@+id/uart_eol_cr"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="80dp"
+			android:text="@string/uart_eol_cr"/>
+
+		<RadioButton
+			android:id="@+id/uart_eol_cr_lf"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="80dp"
+			android:text="@string/uart_eol_cr_lf"/>
+
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="8dp"
+		android:layout_marginLeft="5dp"
+		android:text="@string/uart_edit_select"/>
+
+	<GridView
+		android:id="@+id/grid"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:horizontalSpacing="4dp"
+		android:numColumns="5"
+		android:verticalSpacing="4dp"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context=".uart.UARTActivity">
+
+	<include
+		android:id="@+id/toolbar_actionbar"
+		layout="@layout/toolbar_w_spinner"/>
+
+	<FrameLayout
+		style="@style/HeaderShadow"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<android.support.v4.widget.SlidingPaneLayout
+			android:id="@+id/sliding_pane"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<fragment
+				android:id="@+id/fragment_log"
+				android:name="com.lin.health.uart.UARTLogFragment"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				tools:layout="@layout/fragment_feature_uart_log"/>
+
+			<fragment
+				android:id="@+id/fragment_control"
+				android:name="com.lin.health.uart.UARTControlFragment"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				tools:layout="@layout/fragment_feature_uart_control"/>
+
+		</android.support.v4.widget.SlidingPaneLayout>
+	</FrameLayout>
+</LinearLayout>

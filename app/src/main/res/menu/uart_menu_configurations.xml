@@ -1,0 +1,35 @@
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/action_share"
+		android:orderInCategory="10"
+		android:title="@string/uart_action_share"
+		app:showAsAction="never"/>
+
+	<item
+		android:id="@+id/action_export"
+		android:orderInCategory="11"
+		android:title="@string/uart_action_export"
+		app:showAsAction="never"/>
+
+	<item
+		android:id="@+id/action_rename"
+		android:orderInCategory="12"
+		android:title="@string/uart_action_rename"
+		app:showAsAction="never"/>
+
+	<item
+		android:id="@+id/action_duplicate"
+		android:orderInCategory="13"
+		android:title="@string/uart_action_duplicate"
+		app:showAsAction="never"/>
+
+	<item
+		android:id="@+id/action_remove"
+		android:orderInCategory="14"
+		android:title="@string/uart_action_remove"
+		app:showAsAction="never"/>
+
+</menu>

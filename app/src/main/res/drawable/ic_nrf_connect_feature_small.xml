@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_feature_small_bg" />
+    <item android:drawable="@drawable/ic_nrf_connect_feature_fg" />
+</layer-list>

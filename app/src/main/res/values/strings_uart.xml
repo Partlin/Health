@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="uart_feature_title">UART</string>
+    
+    <string name="uart_action_configure">编辑</string>
+    <string name="uart_action_end">完成</string>
+    <string name="uart_action_send_hint">写命令</string>
+    <string name="uart_action_send">发送</string>
+    <string name="uart_action_show_log">查看日志</string>
+    <string name="uart_action_share">分享</string>
+    <string name="uart_action_export">Export to XML</string>
+    <string name="uart_action_rename">重命名</string>
+    <string name="uart_action_duplicate">副本</string>
+    <string name="uart_action_remove">删除</string>
+	<string name="uart_action_details">详细信息</string>
+	<string name="uart_action_undo">撤销</string>
+    
+    <string name="uart_feature_title_long">UART</string>
+    <dimen name="uart_feature_title_long_margin">-24dp</dimen>
+    
+    <string name="uart_default_name">DEFAULT UART</string>
+    <string name="uart_empty">没有数据显示</string>
+
+	<string name="uart_rename_configuration_title">重命名配置文件</string>
+	<string name="uart_new_configuration_title">新建配置文件</string>
+	<string name="uart_new_configuration_hint">配置文件名</string>
+	<string name="uart_new_configuration_text">请提供一个独特的配置名称:</string>
+	<string name="uart_empty_name_error">名字不能为空.</string>
+	<string name="uart_configuration_loading_failed">加载配置文件失败.</string>
+	<string name="uart_configuration_name_already_taken">同名配置文件已存在.</string>
+	<string name="uart_configuration_deleted">移除配置文件.</string>
+	<string name="uart_configuration_save_error">导出失败.</string>
+	<string name="uart_configuration_load_error">导入失败.</string>
+	<string name="uart_configuration_export_succeeded_ticker">文件已保存</string>
+	<string name="uart_configuration_export_succeeded">文件保存在：/sdcard/</string>
+    
+    <string name="uart_edit_title">配置按钮</string>
+    <string name="uart_edit_command_hint">输入命令</string>
+    <string name="uart_edit_active">激活</string>
+    <string name="uart_edit_select">选择按钮:</string>
+    
+    <string name="uart_notification_action_disconnect">Disconnect</string> 
+    <string name="uart_notification_connected_message">%s is connected.</string>
+
+	<string name="uart_eol">EOL:</string>
+	<string name="uart_eol_cr_lf">CR+LF</string>
+	<string name="uart_eol_lf">LF</string>
+	<string name="uart_eol_cr">CR</string>
+
+    <string name="uart_about_text">UART profile</string>
+</resources>

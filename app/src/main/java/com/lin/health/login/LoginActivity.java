@@ -14,8 +14,8 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.lin.health.FeaturesActivity;
 import com.lin.health.R;
-import com.lin.health.ble.ScanningActivity;
 import com.lin.health.database.UserService;
 
 public class LoginActivity extends Activity {
@@ -81,7 +81,7 @@ public class LoginActivity extends Activity {
                 if (flag) {
                     Log.i("TAG", "登录成功");
                     Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(LoginActivity.this, ScanningActivity.class);
+                    Intent intent = new Intent(LoginActivity.this, FeaturesActivity.class);
                     startActivity(intent);
                 } else {
                     Log.i("TAG", "登录失败");

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<ListPreference
+		android:title="@string/rsc_settings_units_title"
+		android:summary="@string/rsc_settings_units_summary"
+		android:defaultValue="1"
+		android:entries="@array/rsc_settings_units"
+		android:entryValues="@array/rsc_settings_units_values"
+		android:key="settings_rsc_unit" />
+
+</PreferenceScreen>

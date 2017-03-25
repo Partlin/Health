@@ -1,0 +1,21 @@
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="?android:attr/listPreferredItemHeightSmall"
+	android:minWidth="230dp"
+	android:orientation="horizontal">
+
+	<ImageButton
+		android:id="@+id/action_add"
+		style="@style/Widget.IconButton.Add"
+		android:layout_width="80dp"
+		android:layout_height="match_parent"/>
+
+	<ImageButton
+		android:id="@+id/action_import"
+		style="@style/Widget.IconButton.Download"
+		android:layout_width="80dp"
+		android:layout_height="match_parent"/>
+
+</LinearLayout>

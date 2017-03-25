@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<level-list  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:maxLevel="0" android:drawable="@drawable/ic_uart_left_small" />
+    <item android:maxLevel="1" android:drawable="@drawable/ic_uart_up_small" />
+    <item android:maxLevel="2" android:drawable="@drawable/ic_uart_right_small" />
+    <item android:maxLevel="3" android:drawable="@drawable/ic_uart_down_small" />
+    <item android:maxLevel="4" android:drawable="@drawable/ic_uart_settings_small" />
+    <item android:maxLevel="5" android:drawable="@drawable/ic_uart_rewind_small" />
+    <item android:maxLevel="6" android:drawable="@drawable/ic_uart_play_small" />
+    <item android:maxLevel="7" android:drawable="@drawable/ic_uart_pause_small" />
+    <item android:maxLevel="8" android:drawable="@drawable/ic_uart_stop_small" />
+    <item android:maxLevel="9" android:drawable="@drawable/ic_uart_forward_small" />
+    <item android:maxLevel="10" android:drawable="@drawable/ic_uart_about_small" />
+    <item android:maxLevel="11" android:drawable="@drawable/ic_uart_1_small" />
+    <item android:maxLevel="12" android:drawable="@drawable/ic_uart_2_small" />
+    <item android:maxLevel="13" android:drawable="@drawable/ic_uart_3_small" />
+    <item android:maxLevel="14" android:drawable="@drawable/ic_uart_4_small" />
+    <item android:maxLevel="15" android:drawable="@drawable/ic_uart_5_small" />
+    <item android:maxLevel="16" android:drawable="@drawable/ic_uart_6_small" />
+    <item android:maxLevel="17" android:drawable="@drawable/ic_uart_7_small" />
+    <item android:maxLevel="18" android:drawable="@drawable/ic_uart_8_small" />
+    <item android:maxLevel="19" android:drawable="@drawable/ic_uart_9_small" />
+</level-list>
